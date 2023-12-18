@@ -45,15 +45,15 @@ public class School {
             try {
                 choice = scanner.nextInt();
             } catch (InputMismatchException e) {
-                comeOn();
+                mistake();
             }
         } while (choice < 0 || choice > 9);
         scanner.nextLine();
         return choice;
     }
 
-    public static void comeOn() {
-        System.out.println("Эй, ну хватит! Число вводи.");
+    public static void mistake() {
+        System.out.println("Это не число.");
         System.out.print(">> ");
         scanner.nextLine();
     }
@@ -65,7 +65,7 @@ public class School {
             try {
                 id = scanner.nextInt();
             } catch (InputMismatchException e) {
-                comeOn();
+                mistake();
             }
         }
         scanner.nextLine();
@@ -77,11 +77,11 @@ public class School {
         String title = scanner.nextLine();
         double duration = -1.0;
         while (duration == -1.0) {
-            System.out.print("Продолжительность: ");
+            System.out.print("Длительность: ");
             try {
                 duration = scanner.nextDouble();
             } catch (InputMismatchException e) {
-                comeOn();
+                mistake();
             }
         }
         scanner.nextLine();

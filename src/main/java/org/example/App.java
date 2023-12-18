@@ -1,6 +1,6 @@
 package org.example;
 
-
+import java.util.List;
 
 public class App extends Thread{
     View view;
@@ -8,4 +8,5 @@ public class App extends Thread{
     public App() {
         db = new DB();
         view = new View(db);
-    }}
+    }
+}
